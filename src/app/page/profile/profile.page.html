@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title>Profile</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngFor="let person of personList" id="item">
+
+        {{person.name}}
+        <br> {{person.surname}}
+        <br> {{person.age}}
+        <br> {{person.gender}}
+    </div>
+
+    <div *ngIf=" cat == true else loading">
+        I am a Killer
+    </div>
+
+    <ng-template #loading>
+        <div>Loading...</div>
+    </ng-template>
+</ion-content>
